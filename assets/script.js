@@ -54,6 +54,28 @@ $(document).ready(function () {
         });
     }
 
+    // SAVING TO-DO LIST ITEMS FUNCTIONALITY:
+    //ONCE CLICKED, SAVE BUTTON WILL STORE THE USER'S INPUT TO LOCAL STORAGE SO THEY CAN VIEW ON THEIR CALENDAR IF PAGE GETS REFRESHED
+    $(".saveBtn").on("click", function () {
+        var value = $(this).siblings(".list-section").val();
+        var time = $(this).parent().attr("id");
+        localStorage.setItem(time, value);
+    });
+
+    //CODE TO RETRIEVE ITEMS FROM LOCAL STORAGE IF REFRESH HIT
+    $("#hr-8 .list-section").val(localStorage.getItem("hr-8"));
+    $("#hr-9 .list-section").val(localStorage.getItem("hr-9"));
+    $("#hr-10 .list-section").val(localStorage.getItem("hr-10"));
+    $("#hr-11 .list-section").val(localStorage.getItem("hr-11"));
+    $("#hr-12 .list-section").val(localStorage.getItem("hr-12"));
+    $("#hr-13 .list-section").val(localStorage.getItem("hr-13"));
+    $("#hr-14 .list-section").val(localStorage.getItem("hr-14"));
+    $("#hr-15 .list-section").val(localStorage.getItem("hr-15"));
+    $("#hr-16 .list-section").val(localStorage.getItem("hr-16"));
+    $("#hr-17 .list-section").val(localStorage.getItem("hr-17"));
+    $("#hr-18 .list-section").val(localStorage.getItem("hr-18"));
+
+
     
     
 });
