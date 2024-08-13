@@ -16,7 +16,11 @@ Welcome to the Day Planner 2.0!
 
 User Story:
 ``````
-I'd like to be able to update my daily calendar & see the weather in my current location. I'm tired of having to use multiple apps on my laptop, and since I always have my browser open, it would be great to just use there!
+I'd like to be able to update my daily calendar
+& see the weather in my current location. I'm 
+tired of having to use multiple apps on my 
+laptop, and since I always have my browser open, 
+it would be great to just use there!
 ``````
 
 Perfect for easily keeping track of tasks, this application utilizes local storage to prevent the user from losing saved tasks. Moment.js is used to help remind the user of the time by having past, present, and future color themes. To retrieve weather information, the OpenWeatherMap API is used.
