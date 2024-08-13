@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Day</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Your Day at a view - within your browser! No need for another app to be open!" />
+
+    <link rel="stylesheet" href="assets/style.css">
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+IT+Trad:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-wrap">
+        <h1>My Day</h1>
+        <p id="currentDay"></p>
+        <p id="currentDate"></p>
+    </header>
+    <div class="content-wrap">
+        <div class="column">
+            <div class="clock-wrap">
+                <p>Current time: <span id='currentTime'></span></p>
+            </div>
+            <div class="weather-wrap">
+                <p>Enter zip code below to get current weather conditions</p>
+                <input type="text" id="city" placeholder="ex: 10001">
+                <button id="getInfo">Get weather</button>
+                <div class="results-wrapper">
+                    <p id="cityName"></p>
+                    <p id="temp"></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="calendar-wrap">
+                <div class="timeslot" id="hr-8">
+                    <div class="hour-col">
+                        <p>8 <span class='small-caps'>AM</span></p>
+                    </div>
+                    <textarea class="list-section"></textarea>
+                    <button class="saveBtn">💾</button>
+                </div>
+                <div class="timeslot" id="hr-9">
+                    <div class="hour-col">
+                        <p>9 <span class='small-caps'>AM</span></p>
+                    </div>
+                    <textarea class="list-section"></textarea>
+                    <button class="saveBtn">💾</button>
+                </div>
+                <div class="timeslot" id="hr-10">
+                    <div class="hour-col">
+                        <p>10 <span class='small-caps'>AM</span></p>
+                    </div>
+                    <textarea class="list-section"></textarea>
+                    <button class="saveBtn">💾</button>
+                </div>
+                <div class="timeslot" id="hr-11">
+                    <div class="hour-col">
+                        <p>11 <span class='small-caps'>AM</span></p>
+                    </div>
+                    <textarea class="list-section"></textarea>
+                    <button class="saveBtn">💾</button>
+                </div>
+                <div class="timeslot" id="hr-12">
+                    <div class="hour-col">
+                        <p>12 <span class='small-caps'>PM</span></p>
+                    </div>
+                    <textarea class="list-section"></textarea>
+                    <button class="saveBtn">💾</button>
+                </div>
+                <div class="timeslot" id="hr-13">
+                    <div class="hour-col">
+                        <p>1 <span class='small-caps'>PM</span></p>
+                    </div>
+                    <textarea class="list-section"></textarea>
+                    <button class="saveBtn">💾</button>
+                </div>
+                <div class="timeslot" id="hr-14">
+                    <div class="hour-col">
+                        <p>2 <span class='small-caps'>PM</span></p>
+                    </div>
+                    <textarea class="list-section"></textarea>
+                    <button class="saveBtn">💾</button>
+                </div>
+                <div class="timeslot" id="hr-15">
+                    <div class="hour-col">
+                        <p>3 <span class='small-caps'>PM</span></p>
+                    </div>
+                    <textarea class="list-section"></textarea>
+                    <button class="saveBtn">💾</button>
+                </div>
+                <div class="timeslot" id="hr-16">
+                    <div class="hour-col">
+                        <p>4 <span class='small-caps'>PM</span></p>
+                    </div>
+                    <textarea class="list-section"></textarea>
+                    <button class="saveBtn">💾</button>
+                </div>
+                <div class="timeslot" id="hr-17">
+                    <div class="hour-col">
+                        <p>5 <span class='small-caps'>PM</span></p>
+                    </div>
+                    <textarea class="list-section"></textarea>
+                    <button class="saveBtn">💾</button>
+                </div>
+                <div class="timeslot" id="hr-18">
+                    <div class="hour-col">
+                        <p>6 <span class='small-caps'>PM</span></p>
+                    </div>
+                    <textarea class="list-section"></textarea>
+                    <button class="saveBtn">💾</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Erin Platvoet | 2024</p>
+    </footer>
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
