@@ -75,7 +75,26 @@ $(document).ready(function () {
     $("#hr-17 .list-section").val(localStorage.getItem("hr-17"));
     $("#hr-18 .list-section").val(localStorage.getItem("hr-18"));
 
-
+    //VARIABLES SET UP TO DECLARE TIME TO BE USED IN FUNCTION BELOW
+    var today = new Date();
+    let currentTime = today.getHours();
     
+    //FUNCTION CREATED TO SHOW A DIFFERENT COLOR BACKGROUND DEPENDING ON THE CURRENT TIME OF DAY
+    function updateColor() {
+        // let currentTime = today.getHours();
+        $(".timeslot").each(function () {
+            var blockTime = parseInt($(this).attr("id").split("-")[1]);
+            if (blockTime < currentTime) {
+                $(this).addClass("past");
+            } else if (blockTime === currentTime) {
+                $(this).removeClass("past").addClass("present");
+            } else {
+                $(this).removeClass("past", "present").addClass("future");
+            }
+        })
+    };
+
+    //FUNCTION CALL TO GET THE COLORS TO UPDATE:
+    updateColor();
     
 });
