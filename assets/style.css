@@ -7,25 +7,13 @@ body {
 }
 body h1 {
     font-family: "Playwrite IT Trad", cursive;
-    font-size: 44px;
+    font-size: 34px;
     margin: 0;
 }
 body p {
     font-family: "Nunito", sans-serif;
     font-size: 16px;
     margin: 0;
-}
-.header-wrap {
-    width: fit-content;
-    margin: 20px auto;
-    padding: 15px 45px;
-    background-color: white;
-    border-radius: 25px;
-    text-align: center;
-}
-.header-wrap #currentDay {
-    font-size: 22px;
-    font-weight: 700;
 }
 .content-wrap {
     display: flex;
@@ -42,6 +30,16 @@ body p {
 .content-wrap .column:nth-of-type(2) {
     flex-basis: 75%;
     margin-left: 25px;
+}
+.content-wrap .column .header-wrap {
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.content-wrap .column .header-wrap #currentDay {
+    font-size: 22px;
+    font-weight: 700;
 }
 .content-wrap .column .clock-wrap {
     margin: 0 0 20px;
@@ -79,6 +77,16 @@ body p {
 .content-wrap .column .weather-wrap .results-wrapper #cityName {
     font-size: 22px;
     font-weight: 700px;
+    display: flex;
+    align-items: center;
+}
+.content-wrap .column .weather-wrap .results-wrapper #cityName img {
+    width: 40px;
+    height: auto;
+}
+.content-wrap .column .weather-wrap .results-wrapper #temp {
+    padding-top: 5px;
+    border-top: 1px dashed;
 }
 .content-wrap .column .weather-wrap .results-wrapper #temp .temperatures-from-api {
     font-weight: 700;
@@ -94,11 +102,8 @@ body p {
 .content-wrap .column .calendar-wrap .timeslot {
     display: flex;
     flex-direction: row;
-    height: 50px;
+    height: 60px;
     margin: 5px 0 5px;
-}
-.content-wrap .column .calendar-wrap .timeslot > * {
-    /* margin: 0 10px; */
 }
 .content-wrap .column .calendar-wrap .timeslot .hour-col {
     flex-basis: 15%;
@@ -117,32 +122,36 @@ body p {
     background: transparent;
     border: none;
     border-left: 2px solid black;
-    border-right: 2px solid black;
 }
 .content-wrap .column .calendar-wrap .timeslot .saveBtn {
     flex-basis: 10%;
     background: transparent;
-    border: none;
     border-right: 2px solid black;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 }
+.content-wrap .column .calendar-wrap .timeslot .saveBtn:hover {
+    background-color: #fcb3ab;
+}
 .content-wrap .column .calendar-wrap .timeslot.past {
     background-color: #d3d3d3;
-    color: white;
 }
 .content-wrap .column .calendar-wrap .timeslot.present {
-    background-color: #ff6961;
-    color: white;
+    background-color: #fff7cc;
 }
 .content-wrap .column .calendar-wrap .timeslot.future {
-    background-color: #7d7;
-    color: white;
+    background-color: #8ee2d2;
+}
+.content-wrap .column .calendar-wrap .timeslot:last-of-type() {
+    margin: 0 0 0;
 }
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    width: 100vw;
-    text-align: center;
     font-weight: 700;
+    padding: 10px;
+    background: white;
+}
+footer p {
+    font-size: 12px;
 }
