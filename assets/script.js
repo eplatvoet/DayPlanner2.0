@@ -36,12 +36,14 @@ $(document).ready(function () {
             method: "GET",
         }).then(function (response) {
             //ADDING CONTENT TO INDEX.HTML
-            $("#cityName").text(response.name);
-        
-            $("#temp").html(
+            // $("#cityName").text(response.name);
+            $("#cityName").html(
+                response.name + 
                 "<img src='https://openweathermap.org/img/w/" +
                 response.weather[0].icon +
-                ".png'> <br>Current temperature:<br><span class='temperatures-from-api'>" +
+                ".png'>");
+            $("#temp").html(
+                "Current temperature:<br><span class='temperatures-from-api'>" +
                 response.main.temp +
                 "°</span> <br> Currently feels like:<br><span class='temperatures-from-api'>" +
                 response.main.feels_like +
