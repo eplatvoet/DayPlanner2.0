@@ -1,9 +1,10 @@
+html {
+    background-image: url(https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNDUxLWJnLTA2LmpwZw.jpg);
+    background-size: cover;
+}
 body {
     margin: 0;
     padding: 0;
-    background-image: url('https://cdn.pixabay.com/photo/2016/12/06/01/26/colour-1885352_1280.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 body h1 {
     font-family: "Playwrite IT Trad", cursive;
@@ -54,13 +55,17 @@ body p {
     border-radius: 25px;
     padding: 25px;
 }
-.content-wrap .column .weather-wrap input#city {
+.content-wrap .column .weather-wrap .weather-og-state {
+    display: flex;
+    flex-direction: column;
+}
+.content-wrap .column .weather-wrap .weather-og-state input#city {
     font-family: "Nunito", sans-serif;
     padding: 15px 10px;
     font-size: 16px;
     margin-bottom: 20px;
 }
-.content-wrap .column .weather-wrap #getInfo {
+.content-wrap .column .weather-wrap .weather-og-state #getInfo {
     font-family: "Nunito", sans-serif;
     padding: 15px;
     font-size: 16px;
@@ -154,4 +159,111 @@ footer {
 }
 footer p {
     font-size: 12px;
+}
+@media (max-width: 1200px) {
+    .content-wrap {
+        flex-direction: column;
+        margin: 20px 50px 50px;
+        max-width: none;
+   }
+    .content-wrap .column:nth-of-type(1) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+   }
+    .content-wrap .column:nth-of-type(1) .header-wrap {
+        flex-basis: 47%;
+        padding: 10px 0;
+   }
+    .content-wrap .column:nth-of-type(1) .clock-wrap {
+        text-align: center;
+        flex-basis: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+   }
+    .content-wrap .column:nth-of-type(1) .clock-wrap p {
+        font-size: 24px;
+   }
+    .content-wrap .column:nth-of-type(1) .weather-wrap {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+   }
+    .content-wrap .column:nth-of-type(1) .weather-wrap .weather-og-state {
+        flex-basis: 40%;
+   }
+    .content-wrap .column:nth-of-type(1) .weather-wrap .weather-og-state #city {
+        margin-top: 5px;
+   }
+    .content-wrap .column:nth-of-type(1) .weather-wrap .results-wrapper {
+        flex-basis: 40%;
+   }
+    .content-wrap .column:nth-of-type(2) {
+        margin-top: 20px;
+        margin-left: 0;
+   }
+    footer {
+        text-align: center;
+        position: relative;
+   }
+}
+@media (max-width: 767px) {
+    .content-wrap {
+        margin: 20px 30px 50px;
+   }
+    .content-wrap .column:nth-of-type(1) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+   }
+    .content-wrap .column:nth-of-type(1) .header-wrap, .content-wrap .column:nth-of-type(1) .clock-wrap {
+        flex-basis: auto;
+   }
+    .content-wrap .column:nth-of-type(1) .weather-wrap {
+        flex-direction: column;
+        width: auto;
+        text-align: center;
+   }
+    .content-wrap .column:nth-of-type(1) .weather-wrap .weather-og-state #city {
+        text-align: center;
+   }
+    .content-wrap .column:nth-of-type(2) .calendar-wrap .timeslot {
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 150px;
+   }
+    .content-wrap .column:nth-of-type(2) .calendar-wrap .timeslot .hour-col {
+        order: -1;
+        flex-basis: 49.65%;
+        border-bottom: 2px solid black;
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+   }
+    .content-wrap .column:nth-of-type(2) .calendar-wrap .timeslot .list-section {
+        flex-basis: 100%;
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+   }
+    .content-wrap .column:nth-of-type(2) .calendar-wrap .timeslot .saveBtn {
+        order: -1;
+        flex-basis: 49.65%;
+        border: 2px solid black;
+   }
+}
+@media (max-width: 450px) {
+    .content-wrap .column:nth-of-type(2) .calendar-wrap .timeslot {
+        min-height: 200px;
+   }
+    .content-wrap .column:nth-of-type(2) .calendar-wrap .timeslot .hour-col {
+        flex-basis: 100%;
+        border-right: 2px solid black;
+   }
+    .content-wrap .column:nth-of-type(2) .calendar-wrap .timeslot .saveBtn {
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+        border-left: 2px solid black;
+        border-top: none;
+        flex-basis: 100%;
+        order: 3;
+   }
 }

@@ -1,13 +1,10 @@
 html{
     background-image: url(https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNDUxLWJnLTA2LmpwZw.jpg);
-    background-size: contain;
+    background-size: cover;
 }    
 body{
     margin: 0;
     padding: 0;
-    // background-image: url('https://cdn.pixabay.com/photo/2016/12/06/01/26/colour-1885352_1280.jpg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
     h1{
         font-family: "Playwrite IT Trad", cursive;
         font-size: 34px;
@@ -254,8 +251,33 @@ footer{
                     }
                     .saveBtn{
                         order: -1;
-                        flex-basis: 50%;
+                        flex-basis: 49.65%;
                         border: 2px solid black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 450px){
+    .content-wrap{
+        .column:nth-of-type(2){
+            .calendar-wrap{
+                .timeslot{
+                    min-height: 200px;
+                    .hour-col{
+                        flex-basis: 100%;
+                        border-right: 2px solid black;
+                    }
+                    .saveBtn{
+                        border-right: 2px solid black;
+                        border-bottom: 2px solid black;
+                        border-left: 2px solid black;
+                        border-top: none;
+                        flex-basis: 100%;
+                        order: 3;
                     }
                 }
             }
